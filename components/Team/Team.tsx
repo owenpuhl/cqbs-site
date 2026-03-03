@@ -6,8 +6,10 @@ import {MemberType} from "@/pages/about/team";
 
 export default function Team(props: {
     team: MemberType[],
-    title: string,
-    subtitle: string
+    title?: string,
+    subtitle?: string,
+    justify?: string,
+    centered?: boolean
 }) {
     const [url, setUrl] = useState<Location["host"]>();
 
@@ -40,22 +42,32 @@ export default function Team(props: {
 
     return (
         <Flex direction={"column"}>
-            <Flex className={classes.topDiv}>
-                <Title order={1} className={classes.head}>
-                    {props.title}
-                </Title>
-                <Title order={2} className={classes.sub}>
-                    {props.subtitle}
-                </Title>
-            </Flex>
-            <SimpleGrid cols={{
-                base: 1,
-                sm: 2,
-                lg: 3,
-                xl: 4
-            }} mx="auto">
-                {mapTeams}
-            </SimpleGrid>
+            {props.title && (
+                <Flex className={classes.topDiv}>
+                    <Title order={1} className={classes.head}>
+                        {props.title}
+                    </Title>
+                    {props.subtitle && (
+                        <Title order={2} className={classes.sub}>
+                            {props.subtitle}
+                        </Title>
+                    )}
+                </Flex>
+            )}
+            {props.centered ? (
+                <Flex justify="center" wrap="wrap" gap="md">
+                    {mapTeams}
+                </Flex>
+            ) : (
+                <SimpleGrid cols={{
+                    base: 1,
+                    sm: 2,
+                    lg: 3,
+                    xl: 4
+                }} mx="auto">
+                    {mapTeams}
+                </SimpleGrid>
+            )}
         </Flex>
     );
 }

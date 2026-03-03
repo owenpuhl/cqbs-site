@@ -52,5 +52,14 @@
 }
 
 .h {
-    margin-bottom: -10pt;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.member p {
+    margin: 0;
+}
+
+.member h3 {
+    font-size: 1rem;
 }

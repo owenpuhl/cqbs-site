@@ -5,6 +5,7 @@ import Head from 'next/head';
 import {Flex, MantineProvider} from '@mantine/core';
 import {theme} from '@/theme';
 import HeaderMenu from '@/components/HeaderMenu/HeaderMenu';
+import Footer from '@/components/Footer/Footer';
 import {SpeedInsights} from "@vercel/speed-insights/next"
 import {Analytics} from "@vercel/analytics/react"
 
@@ -37,6 +38,7 @@ export default function App({
             <Flex direction={"column"} gap={"xl"}>
                 <Component {...pageProps} />
             </Flex>
+            <Footer/>
             <SpeedInsights/>
             <Analytics/>
         </MantineProvider>

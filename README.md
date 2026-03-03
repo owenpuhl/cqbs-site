@@ -9,4 +9,4 @@ aesthetics. Form handling is done by Pageclip.
 ![scn2..png](./public/scn2.png)
 ![scn3..png](./public/scn3.png)
 
-Made with ❤️ by Jiyoo Dojun @ucsandiego
+© 2026 Columbia Queer Business Society

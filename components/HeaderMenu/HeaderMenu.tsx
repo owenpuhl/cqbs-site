@@ -41,7 +41,7 @@ const links = [
     },
     {
         link: '/contact',
-        label: 'Contact Us'
+        label: 'Connect'
     },
 ];
 

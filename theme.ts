@@ -1,6 +1,7 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
+    fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
     colors: {
         dark: [
             '#fbfbfb',

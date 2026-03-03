@@ -1,6 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* For light mode */
 :root[data-mantine-color-scheme="light"] {
-    --mantine-color-body: #FFFCF4 !important;
+    --mantine-color-body: #FFFFFF !important;
     --mantine-color-text: var(--mantine-color-dark-7) !important;
 }
 

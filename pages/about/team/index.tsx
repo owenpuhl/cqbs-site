@@ -21,15 +21,17 @@ import Bobby from "@/public/Bobby.webp";
 import Sai from "@/public/Sai.webp";
 import AJ from "@/public/AJ.webp";
 import Artemis from "@/public/Artemis.webp";
-import Sabrina from "@/public/Sabrina.webp";
 import Ashley from "@/public/Ashley.webp";
 import Justin from "@/public/Justin.webp";
+import Julia from "@/public/Julia.webp";
+import Gavin from "@/public/Gavin.webp";
+import Emma from "@/public/Emma.webp";
+import Owen from "@/public/Owen.webp";
 import Head from "next/head";
 
 // Array of MemberType
-const title: string = "Members of the Board";
-const subtitle: string = "Meet your current board members!";
-const team: Array<MemberType> = [
+const executiveTitle: string = "Executive Board";
+const executiveOfficers: Array<MemberType> = [
     {
         name: "Sai Sai",
         role: "President",
@@ -49,17 +51,14 @@ const team: Array<MemberType> = [
         pic: Ashley
     },
     {
-        name: "Bobby Veiham",
-        role: "Advisor",
-        about: "Computer Science",
-        pic: Bobby
-    },
-    {
         name: "Artemis Edison",
         role: "Treasurer",
         about: "Economic History",
         pic: Artemis
-    },
+    }
+];
+
+const executiveAdvisors: Array<MemberType> = [
     {
         name: "Justin Kiel",
         role: "Secretary",
@@ -67,10 +66,44 @@ const team: Array<MemberType> = [
         pic: Justin
     },
     {
+        name: "Bobby Veiham",
+        role: "Advisor",
+        about: "Computer Science",
+        pic: Bobby
+    },
+    {
         name: "A.J. Lebenns",
         role: "Advisor",
         about: "Economics",
         pic: AJ
+    }
+];
+
+const committeeTitle: string = "Committee Chairs";
+const committeeTeam: Array<MemberType> = [
+    {
+        name: "Julia Zhang",
+        role: "Events Planning",
+        about: "Financial Economics and English",
+        pic: Julia
+    },
+    {
+        name: "Gavin Xue",
+        role: "Development",
+        about: "Financial Economics",
+        pic: Gavin
+    },
+    {
+        name: "Emma Lu",
+        role: "Marketing",
+        about: "Economics and Art History",
+        pic: Emma
+    },
+    {
+        name: "Owen Puhl",
+        role: "Technology",
+        about: "Applied Mathematics",
+        pic: Owen
     }
 ];
 
@@ -82,9 +115,16 @@ export default function TeamPage() {
             </Head>
             <Flex direction={"column"} gap={"xs"}>
                 <Team
-                    title={title}
-                    subtitle={subtitle}
-                    team={team}
+                    title={executiveTitle}
+                    team={executiveOfficers}
+                />
+                <Team
+                    team={executiveAdvisors}
+                    centered={true}
+                />
+                <Team
+                    title={committeeTitle}
+                    team={committeeTeam}
                 />
             </Flex>
         </>
