@@ -22,11 +22,7 @@ const links = [
         link: '/about/team',
         label: 'Team'
     },
-    {
-        link: '/notion',
-        label: 'Blog'
-    },
-    {
+{
         link: '/contact',
         label: 'Connect'
     },

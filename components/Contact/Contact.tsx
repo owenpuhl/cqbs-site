@@ -58,6 +58,9 @@ export default function Contact() {
 
     return (
         <Flex direction="column" justify="center" align="center" className={classes.topDiv}>
+            <Title order={1} ta="center" mb="xl" maw="80%">
+                Contact Us
+            </Title>
             <Text ta="left" mb="xl" maw="80%">
                 If you would like to contact CQBS about anything, please
                 email us: cqbs@columbia.edu
@@ -70,7 +73,7 @@ export default function Contact() {
             <Title order={1} ta="center" mb="xl" maw="80%" mt="xl">
                 Welcome Prospective Students
             </Title>
-            <Text ta="left" mb="md" maw="80%">
+            <Text ta="left" mb="xl" maw="80%">
                 Welcome! We're thrilled to have you here. Please think of us as a helpful resource – we are happy to delve into what life is like at CQBS or simply chat. If you'd like to connect with a current member of CQBS, kindly fill out the form below. We'll reach out to you as soon as possible!
             </Text>
             <Flex pos="relative" w="80%" justify="center">
