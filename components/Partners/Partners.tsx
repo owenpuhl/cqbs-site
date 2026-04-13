@@ -40,7 +40,7 @@ export default function Partners() {
             const width3 = track3Ref.current?.scrollWidth || 1;
 
             const maxWidth = Math.max(width1, width2, width3);
-            const baseDuration = 60;
+            const baseDuration = 300;
 
             const d1 = (width1 / maxWidth) * baseDuration;
             const d2 = (width2 / maxWidth) * baseDuration;

@@ -1,9 +1,5 @@
 .footer {
     margin-top: 3rem;
     padding: 2rem 1rem;
-    border-top: 1px solid var(--mantine-color-gray-2);
-
-    @media (prefers-color-scheme: dark) {
-        border-top-color: var(--mantine-color-dark-6);
-    }
+    border-top: none;
 }

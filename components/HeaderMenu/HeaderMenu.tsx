@@ -11,29 +11,16 @@ import {IconChevronDown} from '@tabler/icons-react';
 import classes from './HeaderMenu.module.css';
 import {useRouter} from 'next/router'
 import {Image} from '@mantine/core';
-import {
-    ColorSchemeToggle
-} from "@/components/ColorSchemeToggle/ColorSchemeToggle";
 import Link from "next/link";
 
 const links = [
     {
-        link: '#',
-        label: 'About',
-        links: [
-            {
-                link: '/about',
-                label: 'Mission'
-            },
-            {
-                link: '/about/team',
-                label: 'Team'
-            },
-        ],
+        link: '/about',
+        label: 'Mission'
     },
     {
-        link: '/students',
-        label: 'Prospective Students'
+        link: '/about/team',
+        label: 'Team'
     },
     {
         link: '/notion',
@@ -130,7 +117,7 @@ export default function HeaderMenu() {
     });
 
     return (
-        <header className={classes.header}>
+        <header className={classes.header} style={router.pathname === '/' ? { marginBottom: 0 } : {}}>
             <Container>
                 <Flex direction="row" justify="space-between" pt="0.4rem">
                     <Link href="/">
@@ -156,7 +143,6 @@ export default function HeaderMenu() {
                     </Link>
                     <Group gap={5} visibleFrom="sm">
                         {items}
-                        <ColorSchemeToggle/>
                     </Group>
 
                     <Menu

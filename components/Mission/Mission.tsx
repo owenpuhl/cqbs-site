@@ -5,12 +5,13 @@ import NextImage, { StaticImageData } from 'next/image';
 export default function Mission(
     props: {
         title: string,
-        missionStatement: string,
+        missionStatement: string | string[],
         imgSrc: StaticImageData,
         imgAlt: string
     }
 ) {
     const { title, missionStatement, imgSrc, imgAlt } = props;
+    const paragraphs = Array.isArray(missionStatement) ? missionStatement : [missionStatement];
     return <div>
         <Title order={1}
             className={classes.heading}
@@ -32,15 +33,13 @@ export default function Mission(
             justify={"center"}
             wrap={"wrap"}
         >
-            <Text className={classes.paragraph} mb={{
-                base: "0",
-                md: "xl"
-            }}
-            >
-                {missionStatement}
-                <br />
-                <br />
-            </Text>
+            <div>
+                {paragraphs.map((paragraph, index) => (
+                    <Text key={index} className={classes.paragraph} mb="lg">
+                        {paragraph}
+                    </Text>
+                ))}
+            </div>
             <Image className={classes.img}
                 radius="lg"
                 src={imgSrc}
