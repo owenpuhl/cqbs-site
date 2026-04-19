@@ -13,7 +13,9 @@ import {useRouter} from 'next/router'
 import {Image} from '@mantine/core';
 import Link from "next/link";
 
-const links = [
+type NavLink = { link: string; label: string; links?: { link: string; label: string }[] };
+
+const links: NavLink[] = [
     {
         link: '/about',
         label: 'Mission'
